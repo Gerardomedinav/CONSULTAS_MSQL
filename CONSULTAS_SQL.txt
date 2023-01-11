@@ -1,0 +1,40 @@
+CONSULTAS, ELIMINACION, BORRADO, MODIFICACION
+/*agregar tuplas a la columna EDUCACION*/
+INSERT INTO `educacion` (`id_educacion`, `nombre_educativo`, `actualmente_curzando`, `fecha_inicio`, `fecha_fin`, `descripcion`) 
+VALUES (NULL, ' Universidad Nacional Autónoma de Formosa', '1', '2022-05-03', '2023-01-10', 'Técnico Superior en Análisis y Diseño de Software\r\nCursando Actualmente'),
+ (NULL, 'Desarrollador Web Full Stack Jr.', '1', '2022-02-01', '2023-01-10', ' Ministerio de Desarrollo Pruductivo Argentina\r\n-Front End: Estructura y estilos: HTML, 
+CSS y framework como\r\nBootstrap, Lenguaje programación: TypeScrypt y el framework\r\ncomo Angular ambos basados en Javascript\r
+\n-Back End: Base de datos: Lenguaje: Java con Framework Spring\r\nBoot, Web server: Apache Tomcat\r\n-Git Hub\r\n');
+
+/* Mostrar todo el contenido de la tabla PERSONA */
+SELECT * FROM `persona` WHERE 1;
+
+/* Crear Base de Datos */
+CREATE DATABASE PORFOLIO;
+
+/*BORRAR BASE DE DATOS */
+
+DROP DATABASE PORFOLIO;
+
+/* BORRAR TABLA */
+
+DROP TABLE persona;
+
+/*MOSTRAR EL NOMBRE DE LA TABLA PERSONA */
+
+SELECT nombre FROM persona;
+
+/* MOSTRAR  ALUMNOS CON IDCARRERA=1 Y IDLOCALIDAD=2 */ 
+
+SELECT NOMBRE FROM ALUMNOS WHERE IDCARRERA=1 AND IDLOCALIDAD=2;
+
+/* PRESENTAR EL NOMBRE DE TODOS LOS ALUMNOS Y LAS CARRERAS QUE CURSAN */
+
+SELECT ALUMNOS.NOMBRE, CARRERA.NOMBRE FROM ALUMNOS, CARRERAS WHERE ALUMNOS.IDCARRERA=CARRERAS.IDCARRERA;
+
+/* PRESENTAR CADA CARRERA CON SUS MATERIAS */
+
+SELECT C.NOMBRE, M.NOMBRE FORM CARRERA C LEFT JOIN MATERIA M ON (M.IDCARRERA=C.IDCARRERA);
+
+
+ 
